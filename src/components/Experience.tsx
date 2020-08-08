@@ -53,7 +53,7 @@ export default function Experience(props: any)
                         subscribers &middot; collaborated on 
                         <b> {creator.viewsThousands.length}</b> video{isOneVideo ? '' : 's'}
                         {creator.current ? ', and counting, ' : ' '}
-                        with <b>{views}</b>{isOneVideo ? '' : ' total'} views.
+                        <br />with <b>{views}</b>{isOneVideo ? '' : ' total'} views.
                         </p>
                     <span className='expYear'>
                         {creator.years[0]} {currentYear ? ` - ` + currentYear : ''}

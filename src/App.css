@@ -65,6 +65,7 @@ body
     border-radius: 50%;
     float: left;
     border-style: solid;
+    margin-left: 20px;
 }
 
 .expText
