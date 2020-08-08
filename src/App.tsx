@@ -97,6 +97,10 @@ function App()
                     creator={Creators.wilbur}
                 />
             </div>
+            <div className='margin50 footer'>
+                made by <a href="humans.txt">humans</a>, powered by <a href="robots.txt">robots</a><br />
+                &copy; {new Date().getFullYear()} violet mckinney
+            </div>
         </div>
     );
 
