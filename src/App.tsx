@@ -115,8 +115,9 @@ function App()
                 made by <a href="humans.txt">humans</a>, powered by 
                 <a href="https://api.violet.wtf/creators"> robots</a><br />
                 mediocre source code available 
-                <a href="https://github.com/violetwtf/violet.wtf"> here (frontend) </a>
+                <a href="https://github.com/violetwtf/violet.wtf"> here (frontend) </a> and
                 <a href="https://github.com/violetwtf/website-backend"> here (api) </a>
+                <br />
                 &copy; {new Date().getFullYear()} violet mckinney
             </div>
         </div>
