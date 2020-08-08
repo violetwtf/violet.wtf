@@ -22,7 +22,7 @@ function App()
         setLink(link);
     }
 
-    const creatorCount = Object.keys(Creators).length;
+    const creatorCount = Object.keys(creators).filter(key => !key.startsWith("_")).length;
 
     let videos = 0;
     let viewsThousands = 0;
