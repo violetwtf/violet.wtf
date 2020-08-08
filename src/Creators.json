@@ -1,7 +1,7 @@
 {
     "_comments":
     [
-        "File containing info about all the YouTubers. Too lazy to make an API."
+        "File containing info about all the YouTubers. These numbers will render when API fails."
     ],
 
     "graser":
