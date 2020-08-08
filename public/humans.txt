@@ -1,0 +1,2 @@
+violet "dot wtf" mckinney            | code & design    | violet.wtf
+dean "the mean bean machine" bassett | tons of css help | dbassett.dev
