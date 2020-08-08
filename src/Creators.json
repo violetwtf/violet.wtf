@@ -1,0 +1,46 @@
+{
+    "_comments":
+    [
+        "File containing info about all the YouTubers. Too lazy to make an API."
+    ],
+
+    "graser":
+    {
+        "subs": "1.7 million",
+        "current": true,
+        "viewsThousands": [227, 222],
+        "name": "Graser",
+        "years": ["2020"],
+        "yt": "Graser"
+    },
+
+    "kiing":
+    {
+        "subs": "1.4 million",
+        "current": true,
+        "viewsThousands": [900, 341],
+        "name": "Kiingtong",
+        "years": ["2020"],
+        "yt": "Kiingtong"
+    },
+
+    "ant":
+    {
+        "subs": "1.0 million",
+        "current": false,
+        "viewsThousands": [29, 560, 24, 19],
+        "name": "Antster",
+        "years": ["2020"],
+        "yt": "Antster"
+    },
+
+    "wilbur":
+    {
+        "subs": "1.5 million",
+        "current": false,
+        "viewsThousands": [1300],
+        "name": "Wilbur Soot",
+        "yt": "c/WilburPlays",
+        "years": ["2020"]
+    }
+}

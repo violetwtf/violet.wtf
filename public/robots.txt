@@ -1,0 +1,4 @@
+# Bite my shiny metal ass
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
