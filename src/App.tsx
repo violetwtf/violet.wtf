@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Creators from './Creators.json';
 import Experience from './components/Experience';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Logos
 import GraserLogo from './assets/graser.jpg';
@@ -43,9 +42,10 @@ function App()
 
     const viewsMillions = (viewsThousands / 1000).toFixed(1);
 
+
     return (
         <div>
-            <div className="nameArea">
+            <div className='nameArea margin50'>
                 <p className="name">
                     <p><strong className="actualName"><a href={link}>{name} </a></strong></p>
                     is the developer behind 
@@ -75,7 +75,7 @@ function App()
                     </span>
                 </div>
             </div>
-            <div className="experienceArea">
+            <div className='margin50'>
                 <Experience 
                     gradientColors={['#aba514', '#a56b01', '#393939']}
                     logo={GraserLogo}

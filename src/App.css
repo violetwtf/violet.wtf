@@ -11,9 +11,7 @@ body
 
 .nameArea
 {
-    margin: auto;
-    margin-top: 7%;
-    width: 50%;
+    margin-top: 1em !important;
     font-size: 28px;
     margin-bottom: 1%;
 }
@@ -38,40 +36,38 @@ body
     cursor: pointer;
 }
 
-.experienceArea
+.margin50
 {
+    width: 700px;
+    max-width: 90%;
     margin: auto;
-    width: 50%;
 }
 
 .experience
 { 
-    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
     border-radius: 5px;
-    float: left;
     width: 100%;
     padding-bottom: 1em;
     font-size: 20px;
-}
-
-.expContent
-{
     padding: 1em;
+    box-sizing: border-box;
 }
 
 .logo
 {
     width: 3em;
     border-radius: 50%;
-    float: left;
     border-style: solid;
-    margin-left: 20px;
+    height: 3em;
 }
 
 .expText
 {
     margin-left: 1em;
-    float: left;
     font-size: 16px;
 }
 

@@ -38,27 +38,25 @@ export default function Experience(props: any)
 
     return (
         <div className='experience' style={background}>
-            <div className='expContent'>
-                <img className='logo' src={props.logo} />
-                <div className='expText'>
-                    <p>
-                        <b className='expName'>
-                            <a className='expLink' href={'https://youtube.com/' + creator.yt}>
-                                { creator.name }
-                            </a>
-                        </b>
+            <img className='logo' src={props.logo} />
+            <div className='expText'>
+                <p>
+                    <b className='expName'>
+                        <a className='expLink' href={'https://youtube.com/' + creator.yt}>
+                            { creator.name }
+                        </a>
+                    </b>
+                </p>
+                <p>
+                    <b>{creator.subs} </b> 
+                    subscribers &middot; collaborated on 
+                    <b> {creator.viewsThousands.length}</b> video{isOneVideo ? '' : 's'}
+                    {creator.current ? ', and counting, ' : ' '}
+                    with <b>{views}</b>{isOneVideo ? '' : ' total'} views.
                     </p>
-                    <p>
-                        <b>{creator.subs} </b> 
-                        subscribers &middot; collaborated on 
-                        <b> {creator.viewsThousands.length}</b> video{isOneVideo ? '' : 's'}
-                        {creator.current ? ', and counting, ' : ' '}
-                        <br />with <b>{views}</b>{isOneVideo ? '' : ' total'} views.
-                        </p>
-                    <span className='expYear'>
-                        {creator.years[0]} {currentYear ? ` - ` + currentYear : ''}
-                    </span>
-                </div>
+                <span className='expYear'>
+                    {creator.years[0]} {currentYear ? ` - ` + currentYear : ''}
+                </span>
             </div>
         </div>
     );
