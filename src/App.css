@@ -11,7 +11,7 @@ body
 
 .nameArea
 {
-    margin-top: 3em !important;
+    margin-top: 1em !important;
     font-size: 28px;
     margin-bottom: 1%;
 }
@@ -91,7 +91,7 @@ body
 .footer
 {
     text-align: center;
-    padding-bottom: 3em; 
+    padding-bottom: 1em;
 }
 
 *

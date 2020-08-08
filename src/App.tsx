@@ -13,14 +13,13 @@ function App()
 {
     const [name, setName] = useState("violet mckinney");
     const [link, setLink] = useState("https://violet.wtf");
+    const [creators, setCreators] = useState(Creators as any);
 
     function nl(name: string, link: string)
     {
         setName(name);
         setLink(link);
     }
-
-    const creators = Creators as any;
 
     const creatorCount = Object.keys(Creators).length;
 
@@ -42,6 +41,16 @@ function App()
 
     const viewsMillions = (viewsThousands / 1000).toFixed(1);
 
+
+    fetch('https://api.violet.wtf/creators')
+        .then((res) =>
+        {
+            return res.json();
+        })
+        .then((json) =>
+        {
+            setCreators(json);
+        });
 
     return (
         <div>
@@ -79,22 +88,22 @@ function App()
                 <Experience 
                     gradientColors={['#aba514', '#a56b01', '#393939']}
                     logo={GraserLogo}
-                    creator={Creators.graser}
+                    creator={creators.graser}
                 />
                 <Experience
                     gradientColors={['#e49a64', '#a5019a', '#00bbff']}
                     logo={KiingLogo}
-                    creator={Creators.kiing}
+                    creator={creators.kiing}
                 />
                 <Experience
                     gradientColors={['#00bbff', '#01a57e', '#4a9fb0']}
                     logo={AntLogo}
-                    creator={Creators.ant}
+                    creator={creators.ant}
                 />
                 <Experience
                     gradientColors={['#167bc9', '#4f00a6', '#5f98a1']}
                     logo={WilburLogo}
-                    creator={Creators.wilbur}
+                    creator={creators.wilbur}
                 />
             </div>
             <div className='margin50 footer'>
