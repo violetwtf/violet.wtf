@@ -112,11 +112,11 @@ function App()
                 />
             </div>
             <div className='margin50 footer'>
-                made by <a href="humans.txt">humans</a>, powered by 
-                <a href="https://api.violet.wtf/creators"> robots</a><br />
-                mediocre source code available 
-                <a href="https://github.com/violetwtf/violet.wtf"> here (frontend) </a> and
-                <a href="https://github.com/violetwtf/website-backend"> here (api) </a>
+                made by <a href="humans.txt">humans</a>, powered <span>by </span> 
+                <a href="https://api.violet.wtf/creators">robots</a><br />
+                <span>mediocre source code available </span>
+                <span><a href="https://github.com/violetwtf/violet.wtf">here (frontend)</a> and </span>
+                <a href="https://github.com/violetwtf/website-backend">here (api)</a>
                 <br />
                 &copy; {new Date().getFullYear()} violet mckinney
             </div>
