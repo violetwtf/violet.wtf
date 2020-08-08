@@ -13,6 +13,7 @@ function App()
 {
     const [name, setName] = useState("violet mckinney");
     const [link, setLink] = useState("https://violet.wtf");
+    const [fetched, setFetched] = useState(false);
     const [creators, setCreators] = useState(Creators as any);
 
     function nl(name: string, link: string)
@@ -42,15 +43,19 @@ function App()
     const viewsMillions = (viewsThousands / 1000).toFixed(1);
 
 
-    fetch('https://api.violet.wtf/creators')
-        .then((res) =>
-        {
-            return res.json();
-        })
-        .then((json) =>
-        {
-            setCreators(json);
-        });
+    if (!fetched)
+    {
+        setFetched(true);
+        fetch('https://api.violet.wtf/creators')
+            .then((res) =>
+            {
+                return res.json();
+            })
+            .then((json) =>
+            {
+                setCreators(json);
+            });
+    }
 
     return (
         <div>
@@ -107,7 +112,11 @@ function App()
                 />
             </div>
             <div className='margin50 footer'>
-                made by <a href="humans.txt">humans</a>, powered by <a href="robots.txt">robots</a><br />
+                made by <a href="humans.txt">humans</a>, powered by 
+                <a href="https://api.violet.wtf/creators"> robots</a><br />
+                mediocre source code available 
+                <a href="https://github.com/violetwtf/violet.wtf"> here (frontend) </a>
+                <a href="https://github.com/violetwtf/website-backend"> here (api) </a>
                 &copy; {new Date().getFullYear()} violet mckinney
             </div>
         </div>
