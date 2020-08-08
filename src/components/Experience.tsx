@@ -35,14 +35,15 @@ export default function Experience(props: any)
     }
 
     const isOneVideo = creator.viewsThousands.length === 1;
+    const yt = 'https://youtube.com/' + creator.yt;
 
     return (
         <div className='experience' style={background}>
-            <img className='logo' src={props.logo} />
+            <a href={yt}><img className='logo' src={props.logo} /></a>
             <div className='expText'>
                 <p>
                     <b className='expName'>
-                        <a className='expLink' href={'https://youtube.com/' + creator.yt}>
+                        <a className='expLink' href={yt}>
                             { creator.name }
                         </a>
                     </b>
