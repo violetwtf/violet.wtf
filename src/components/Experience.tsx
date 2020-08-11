@@ -1,25 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ExperienceBox from './ExperienceBox';
 
 export default function Experience(props: any)
 {
 
     const { creator } = props;
-
-    const background = 
-    {
-        background: `linear-gradient(156deg, ` + 
-        `${props.gradientColors[0]} 0%, ` + 
-        `${props.gradientColors[1]} 25%, ` + 
-        `${props.gradientColors[2]} 100%)`
-    }
-
-    const currentYear = creator.current 
-        ? 'Present' 
-        : (
-            creator.years.length > 1
-            ? creator.years[1]
-            : false
-        );
 
     const totalViewsThousands = creator.viewsThousands.reduce((a: number, b: number) => a + b);
 
@@ -35,31 +20,22 @@ export default function Experience(props: any)
     }
 
     const isOneVideo = creator.viewsThousands.length === 1;
+
     const yt = 'https://youtube.com/' + creator.yt;
 
     return (
-        <div className='experience' style={background}>
-            <a href={yt}><img className='logo' src={props.logo} /></a>
-            <div className='expText'>
-                <p>
-                    <b className='expName'>
-                        <a className='expLink' href={yt}>
-                            { creator.name }
-                        </a>
-                    </b>
-                </p>
-                <p>
-                    <b>{creator.subs} </b> 
-                    subscribers &middot; collaborated on 
-                    <b> {creator.viewsThousands.length}</b> video{isOneVideo ? '' : 's'}
-                    {creator.current ? ', and counting, ' : ' '}
-                    with <b>{views}</b>{isOneVideo ? '' : ' total'} views.
-                    </p>
-                <span className='expYear'>
-                    {creator.years[0]} {currentYear ? ` - ` + currentYear : ''}
-                </span>
-            </div>
-        </div>
+        <ExperienceBox 
+            creator={creator} 
+            link={yt} 
+            gradientColors={props.gradientColors} 
+            logo={props.logo}
+        >
+            <b>{creator.subs} </b> 
+            subscribers &middot; collaborated on 
+            <b> {creator.viewsThousands.length}</b> video{isOneVideo ? '' : 's'}
+            {creator.current ? ', and counting, ' : ' '}
+            with <b>{views}</b>{isOneVideo ? '' : ' total'} views.
+        </ExperienceBox>
     );
 
 }
