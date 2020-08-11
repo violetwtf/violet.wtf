@@ -26,6 +26,7 @@ function App()
 
     let videos = 0;
     let viewsThousands = 0;
+    let seenVideos: string[] = [];
     
     for (const key of Object.keys(creators))
     {
@@ -37,7 +38,20 @@ function App()
         const creator = creators[key];
 
         videos += creator.viewsThousands.length;
-        viewsThousands += creator.viewsThousands.reduce((a: number, b: number) => a + b);
+        
+        for (let i = 0; i < creator.videoIds.length; i++)
+        {
+            const id = creator.videoIds[i];
+
+            if (seenVideos.includes(id))
+            {
+                continue;
+            }
+
+            seenVideos.push(id);
+
+            viewsThousands += creator.viewsThousands[i];
+        }
     }
 
     const viewsMillions = (viewsThousands / 1000).toFixed(1);
