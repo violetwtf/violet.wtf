@@ -8,6 +8,7 @@ import GraserLogo from './assets/graser.jpg';
 import KiingLogo from './assets/kiing.jpg';
 import AntLogo from './assets/ant.jpg';
 import WilburLogo from './assets/wilbur.jpg';
+import TaplLogo from './assets/tapl.jpg';
 
 function App() 
 {
@@ -113,6 +114,11 @@ function App()
                     gradientColors={['#e49a64', '#a5019a', '#00bbff']}
                     logo={KiingLogo}
                     creator={creators.kiing}
+                />
+                <Experience
+                    gradientColors={['#c4493d', '#8a5318', '#336f36']}
+                    logo={TaplLogo}
+                    creator={creators.tapl}
                 />
                 <Experience
                     gradientColors={['#00bbff', '#01a57e', '#4a9fb0']}

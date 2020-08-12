@@ -39,5 +39,14 @@
     "viewsThousands": [1336],
     "years": ["2020"],
     "yt": "c/WilburPlays"
+  },
+  "tapl": {
+      "current": true,
+      "name": "TapL",
+      "subs": "899 thousand",
+      "videoIds": [],
+      "viewsThousands": [],
+      "years": ["2020"],
+      "yt": "TapLHarv"
   }
 }
