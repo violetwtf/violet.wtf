@@ -16,7 +16,7 @@ export default function Experience(props: any)
 
     if (totalViewsThousands >= 1000)
     {
-        views = totalViewsThousands / 1000 + " million";
+        views = (totalViewsThousands / 1000).toFixed(1) + " million";
     }
     else
     {
