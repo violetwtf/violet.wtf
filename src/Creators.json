@@ -9,32 +9,46 @@
     "name": "Antster",
     "subs": "1.1 million",
     "videoIds": ["RlzT_VVNrAU", "qwBI5g733N0", "Im7kMHDjlq8", "d6pZiIQuTHU"],
-    "viewsThousands": [29, 664, 25, 20],
+    "viewsThousands": [30, 775, 25, 20],
     "years": ["2020"],
     "yt": "Antster"
   },
   "graser": {
     "current": true,
     "name": "Graser",
-    "subs": "1.7 million",
-    "videoIds": ["3wleyIA27jw", "ylIPSiNU4m8", "0vwyNM-KZHs", "rR4EqN5dm-Q"],
-    "viewsThousands": [427, 241, 159, 354],
+    "subs": "1.8 million",
+    "videoIds": [
+      "3wleyIA27jw",
+      "ylIPSiNU4m8",
+      "0vwyNM-KZHs",
+      "rR4EqN5dm-Q",
+      "BwwK9Qi4KZ4",
+      "vk6nZNRFvYg",
+      "2Gw8fDk617M"
+    ],
+    "viewsThousands": [477, 267, 187, 455, 345, 314, 192],
     "years": ["2020"],
     "yt": "Graser"
   },
   "kiing": {
     "current": true,
     "name": "Kiingtong",
-    "subs": "1.4 million",
-    "videoIds": ["664tEfsH3rI", "yqq8S0V9ciY", "bjNURUlqPQM"],
-    "viewsThousands": [990, 426, 546],
+    "subs": "1.5 million",
+    "videoIds": [
+      "664tEfsH3rI",
+      "yqq8S0V9ciY",
+      "bjNURUlqPQM",
+      "Y0ZiY-hZyZA",
+      "ZsyC7RoAdvg"
+    ],
+    "viewsThousands": [1083, 458, 776, 542, 830],
     "years": ["2020"],
     "yt": "Kiingtong"
   },
   "tapl": {
     "current": true,
     "name": "TapL",
-    "subs": "908 thousand",
+    "subs": "925 thousand",
     "videoIds": [],
     "viewsThousands": [],
     "years": ["2020"],
@@ -45,7 +59,7 @@
     "name": "Wilbur Soot",
     "subs": "1.6 million",
     "videoIds": ["9F9wHSKxFW8"],
-    "viewsThousands": [1387],
+    "viewsThousands": [1447],
     "years": ["2020"],
     "yt": "WilburPlays"
   }
