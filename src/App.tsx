@@ -10,12 +10,27 @@ import AntLogo from './assets/ant.jpg';
 import WilburLogo from './assets/wilbur.jpg';
 import TaplLogo from './assets/tapl.jpg';
 
+const DEBUG = false;
+const ENDPOINT = !DEBUG ? "https://api.violet.wtf/" : "http://localhost:1235/";
+
 function App() 
 {
+    if (DEBUG)
+    {
+        (window as any).debugSetViolet = (val: boolean) =>
+        {
+            setViolet(val);
+        }
+    }
+
     const [name, setName] = useState("violet mckinney");
     const [link, setLink] = useState("https://violet.wtf");
     const [fetched, setFetched] = useState(false);
     const [creators, setCreators] = useState(Creators as any);
+    const [isViolet, setViolet] = useState(false);
+    const [isForm, setForm] = useState(window.location.href.endsWith("violetWasHere"));
+    const [value, setValue] = useState("");
+    const [creator, setCreator] = useState("");
 
     function nl(name: string, link: string)
     {
@@ -61,7 +76,7 @@ function App()
     if (!fetched)
     {
         setFetched(true);
-        fetch('https://api.violet.wtf/creators')
+        fetch(ENDPOINT + 'creators')
             .then((res) =>
             {
                 return res.json();
@@ -70,6 +85,78 @@ function App()
             {
                 setCreators(json);
             });
+
+        
+        const token = localStorage.getItem("t");
+
+        if (token)
+        {
+            fetch(ENDPOINT + 'check', { 
+                method: 'post', 
+                body: JSON.stringify(token), 
+                headers: {'Content-Type': 'application/json'},
+            })
+                .then((res) =>
+                {
+                    return res.json();
+                })
+                .then((json) =>
+                {
+                    if (json)
+                    {
+                        setViolet(true);
+                    }
+                });
+        }
+    }
+
+    async function handleSubmit(e: any)
+    {
+        e.preventDefault();
+
+        if (isViolet)
+        {
+            const res = await fetch(
+                ENDPOINT + 'videos',
+                { method: 'post', body: JSON.stringify({ 
+                    id: value.replace("https://www.youtube.com/watch?v=", "")
+                        .replace("https://youtu.be/", ""),
+                    creator,
+                    token: localStorage.getItem("t"),
+                }), headers: {'Content-Type': 'application/json'},}
+            );
+
+            const json = await res.json();
+
+            if (!json)
+            {
+                nl("something went terribly wrong", "https://violet.wtf");
+            } else
+            {
+                nl("done! wooo", "https://graphs.violet.wtf");
+            }
+        } else
+        {
+            const res = await fetch(
+                ENDPOINT + 'login', 
+                { 
+                    method: 'post', 
+                    body: JSON.stringify(value), 
+                    headers: {'Content-Type': 'application/json'}, 
+                }
+            );
+    
+            const json = await res.json();
+    
+            if (!json)
+            {
+                nl("wrong password lol, for violet only", "https://violet.wtf");
+            } else
+            {
+                localStorage.setItem("t", json);
+                setViolet(true);
+            }
+        }
     }
 
     return (
@@ -82,6 +169,31 @@ function App()
                     by <strong>{creatorCount}</strong> creators, 
                     with <strong>{viewsMillions} million</strong> combined views.
                 </p>
+                {!isForm ? <div /> : <div>
+                    <br />
+                    <form onSubmitCapture={handleSubmit}>
+                        <p>{isViolet ? "add video" : "hi you found an easter egg, password?"}</p>
+                        <input 
+                            style={{color: 'black'}} 
+                            type={isViolet ? "text" : "password"} 
+                            onChange={e => setValue(e.target.value)}
+                        />
+                        {!isViolet ? <div /> : <div>
+                            <select onChange={e => setCreator(e.target.value)} style={{color: 'black'}} >
+                            {Object.keys(creators)
+                                .filter(id => !id.startsWith("_") && creators[id].current)
+                                .map(
+                                    id => 
+                                    <option value={id} key={id}>
+                                        {creators[id].name + ` (${id})`}
+                                    </option>
+                                )
+                            }
+                            </select>
+                        </div>}
+                        <input type="submit" style={{color: 'black'}} />
+                    </form>
+                </div>}
                 <div className="socials">
                 <span 
                         className="social" 
@@ -102,6 +214,18 @@ function App()
                         className="social"
                         onClick={_ => nl("@violetwtf", 'https://github.com/violetwtf')}>github 
                     </span>
+                    {!isViolet ? <span /> : <span>
+                        <span> | </span>
+                        <span 
+                            className="social"
+                            onClick={_ => nl("hi violet", 'https://graphs.violet.wtf')}>graphs
+                        </span>
+                        <span> | </span>
+                        <span 
+                            className="social"
+                            onClick={_ => setForm(!isForm)}>add video
+                        </span>
+                    </span>}
                 </div>
             </div>
             <div className='margin50'>

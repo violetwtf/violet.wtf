@@ -1,7 +1,7 @@
 {
   "_comments": [
     "File containing info about all the YouTubers. These numbers will render when API fails.",
-    "Updated: 2020-09-06"
+    "Updated: 2020-10-14"
   ],
 
   "ant": {
@@ -9,14 +9,14 @@
     "name": "Antster",
     "subs": "1.1 million",
     "videoIds": ["RlzT_VVNrAU", "qwBI5g733N0", "Im7kMHDjlq8", "d6pZiIQuTHU"],
-    "viewsThousands": [30, 837, 25, 20],
+    "viewsThousands": [31, 871, 25, 21],
     "years": ["2020"],
     "yt": "Antster"
   },
   "graser": {
     "current": true,
     "name": "Graser",
-    "subs": "1.8 million",
+    "subs": "1.9 million",
     "videoIds": [
       "3wleyIA27jw",
       "ylIPSiNU4m8",
@@ -27,16 +27,41 @@
       "2Gw8fDk617M",
       "WxGAHy5J42s",
       "5kB7dhSFfUg",
-      "IEkmhJgEPSw"
+      "IEkmhJgEPSw",
+      "h-YoXqP6GNI",
+      "YS_ALOvIvT4",
+      "bDpSEsWZGkg",
+      "ZzWMdvdAbuY",
+      "4ET88iZwKdY",
+      "vPrp7GLpurQ",
+      "tWhg1GGdKxE"
     ],
-    "viewsThousands": [513, 285, 205, 557, 384, 391, 237, 294, 235, 7],
+    "viewsThousands": [
+      587,
+      330,
+      235,
+      952,
+      482,
+      753,
+      290,
+      469,
+      368,
+      279,
+      308,
+      1648,
+      441,
+      347,
+      436,
+      379,
+      236
+    ],
     "years": ["2020"],
     "yt": "Graser"
   },
   "kiing": {
     "current": true,
     "name": "Kiingtong",
-    "subs": "1.5 million",
+    "subs": "1.6 million",
     "videoIds": [
       "664tEfsH3rI",
       "yqq8S0V9ciY",
@@ -44,27 +69,45 @@
       "Y0ZiY-hZyZA",
       "ZsyC7RoAdvg",
       "w41xdgBlmoI",
-      "uAslPI_WUdM"
+      "uAslPI_WUdM",
+      "s35S791-RDY",
+      "a0jn2LRMHH8",
+      "9pwl44IQ9AU",
+      "tUie_NLk2Zs",
+      "CuZpZDn7XPs"
     ],
-    "viewsThousands": [1222, 496, 912, 680, 1357, 852, 393],
+    "viewsThousands": [
+      1546,
+      579,
+      1247,
+      991,
+      2443,
+      1243,
+      678,
+      1328,
+      1737,
+      1370,
+      758,
+      795
+    ],
     "years": ["2020"],
     "yt": "Kiingtong"
   },
   "tapl": {
-    "current": true,
+    "current": false,
     "name": "TapL",
-    "subs": "944 thousand",
-    "videoIds": [],
-    "viewsThousands": [],
+    "subs": "1.0 million",
+    "videoIds": ["uGPgv_n9Ty0"],
+    "viewsThousands": [155],
     "years": ["2020"],
     "yt": "TapLHarv"
   },
   "wilbur": {
     "current": false,
     "name": "Wilbur Soot",
-    "subs": "1.7 million",
+    "subs": "2.1 million",
     "videoIds": ["9F9wHSKxFW8"],
-    "viewsThousands": [1488],
+    "viewsThousands": [1654],
     "years": ["2020"],
     "yt": "WilburPlays"
   }

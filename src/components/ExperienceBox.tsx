@@ -4,7 +4,6 @@ export default function ExperienceBox(props: any)
 {
     const { creator } = props;
 
-
     const background = 
     {
         background: `linear-gradient(156deg, ` + 

@@ -24,3 +24,7 @@ yarn-error.log*
 
 # dont ask lol
 time.txt
+
+# ignore me
+src/assets/_aaa.jpg
+next.tsx
