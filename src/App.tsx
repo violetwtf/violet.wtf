@@ -60,7 +60,7 @@ const VIOLETS = [
   {
     condition: dateIs(11),
     avatar: XmasViolet,
-    name: "violet mcclaus",
+    name: "violet claus",
   },
 ];
 
