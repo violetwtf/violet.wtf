@@ -1,100 +1,98 @@
-body
-{
-    background-image: url('noise.png');
+body {
+  background-image: url("noise.png");
 }
 
-*
-{
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+* {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
 }
 
-.nameArea
-{
-    margin-top: 1em !important;
-    font-size: 28px;
-    margin-bottom: 1%;
+.nameArea {
+  margin-top: 1em !important;
+  font-size: 28px;
+  margin-bottom: 1%;
 }
 
-.actualName
-{
-    font-size: 32px;
-    text-decoration: underline;
-    cursor: pointer;
+.actualName {
+  font-size: 32px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.socials
-{
-    margin-top: 1em;
-    font-size: 20px;
-    text-align: center;
+.violet {
+  margin-right: 16px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
 }
 
-.social
-{
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.margin50
-{
-    width: 700px;
-    max-width: 90%;
-    margin: auto;
-}
-
-.experience
-{ 
+@media (min-width: 500px) {
+  .name {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 10px 0;
-    border-radius: 5px;
-    width: 100%;
-    padding-bottom: 1em;
-    font-size: 20px;
-    padding: 1em;
-    box-sizing: border-box;
+  }
 }
 
-.logo
-{
-    width: 3em;
-    border-radius: 50%;
-    border-style: solid;
-    height: 3em;
+.socials {
+  margin-top: 1em;
+  font-size: 20px;
+  text-align: center;
 }
 
-.expText
-{
-    margin-left: 1em;
-    font-size: 16px;
+.social {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.expName
-{
-    color: white;
-    font-size: 20px;
+.margin50 {
+  width: 700px;
+  max-width: 90%;
+  margin: auto;
 }
 
-.expYear
-{
-    font-size: 14px;
-    color: #cccccc;
+.experience {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 100%;
+  padding-bottom: 1em;
+  font-size: 20px;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
-.expLink
-{
-    text-decoration: none;
+.logo {
+  width: 3em;
+  border-radius: 50%;
+  border-style: solid;
+  height: 3em;
 }
 
-.footer
-{
-    text-align: center;
-    padding-bottom: 1em;
+.expText {
+  margin-left: 1em;
+  font-size: 16px;
 }
 
-*
-{
-    margin: 0;
+.expName {
+  color: white;
+  font-size: 20px;
+}
+
+.expYear {
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.expLink {
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+* {
+  margin: 0;
 }

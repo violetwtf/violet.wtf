@@ -1,2 +1,4 @@
-violet "dot wtf" mckinney            | code & design    | violet.wtf
-dean "the mean bean machine" bassett | tons of css help | dbassett.dev
+violet mckinney | code & design  | violet.wtf
+dean basset     | css help       | dbassett.dev
+paul sauve      | css help       | neowire.co
+magentagirl     | violet avatars | twitter.com/magentagirl_

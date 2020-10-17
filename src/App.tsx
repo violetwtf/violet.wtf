@@ -3,12 +3,81 @@ import "./App.css";
 import Creators from "./Creators.json";
 import Experience from "./components/Experience";
 
+// Violets
+import DefaultViolet from "./assets/violets/0default.png"; // default
+import NewYearViolet from "./assets/violets/1newyear.png"; // january
+import ValentinesViolet from "./assets/violets/2valentines.png"; // february
+import BirthdayViolet from "./assets/violets/3bday.png"; // march 4th
+import StPatricksViolet from "./assets/violets/3stpatricks.png"; // rest of march
+import PrideViolet from "./assets/violets/6pride.png"; // june
+import HalloweenViolet from "./assets/violets/10halloween.png"; // october
+import ThanksgivingViolet from "./assets/violets/11thanksgiving.png"; // november
+import XmasViolet from "./assets/violets/12xmas.png"; // december
+
 // Logos
 import GraserLogo from "./assets/graser.jpg";
 import KiingLogo from "./assets/kiing.jpg";
 import AntLogo from "./assets/ant.jpg";
 import WilburLogo from "./assets/wilbur.jpg";
 import TaplLogo from "./assets/tapl.jpg";
+
+const VIOLETS = [
+  {
+    condition: dateIs(0),
+    avatar: NewYearViolet,
+    name: "violet mcnewyear",
+  },
+  {
+    condition: dateIs(1),
+    avatar: ValentinesViolet,
+    name: "violet mccupid",
+  },
+  {
+    condition: dateIs(2, 4),
+    avatar: BirthdayViolet,
+    name: "violet mcbirthday",
+  },
+  {
+    condition: dateIs(2),
+    avatar: StPatricksViolet,
+    name: "violet stpatrick",
+  },
+  {
+    condition: dateIs(5),
+    avatar: PrideViolet,
+    name: "violet mcqueery",
+  },
+  {
+    condition: dateIs(9),
+    avatar: HalloweenViolet,
+    name: "violet mcspooky",
+  },
+  {
+    condition: dateIs(10),
+    avatar: ThanksgivingViolet,
+    name: "violet mcthankful",
+  },
+  {
+    condition: dateIs(11),
+    avatar: XmasViolet,
+    name: "violet mcclaus",
+  },
+];
+
+// month is 0-indexed, day isn't
+function dateIs(month: number, day = -1) {
+  const date = new Date();
+
+  if (month !== date.getMonth()) {
+    return false;
+  }
+
+  if (day > -1 && day !== date.getDate()) {
+    return false;
+  }
+
+  return true;
+}
 
 const DEBUG = false;
 const ENDPOINT = !DEBUG ? "https://api.violet.wtf/" : "http://localhost:1235/";
@@ -20,7 +89,23 @@ function App() {
     };
   }
 
-  const [name, setName] = useState("violet mckinney");
+  let todaysViolet = null;
+
+  for (const violet of VIOLETS) {
+    if (violet.condition) {
+      todaysViolet = violet;
+      break;
+    }
+  }
+
+  if (!todaysViolet) {
+    todaysViolet = {
+      name: "violet mckinney",
+      avatar: DefaultViolet,
+    };
+  }
+
+  const [name, setName] = useState(todaysViolet.name);
   const [link, setLink] = useState("https://violet.wtf");
   const [fetched, setFetched] = useState(false);
   const [creators, setCreators] = useState(Creators as any);
@@ -107,9 +192,6 @@ function App() {
     e.preventDefault();
 
     if (isViolet) {
-      console.log(creator);
-      return;
-
       const res = await fetch(ENDPOINT + "videos", {
         method: "post",
         body: JSON.stringify({
@@ -150,17 +232,24 @@ function App() {
   return (
     <div>
       <div className="nameArea margin50">
-        <p className="name">
-          <p>
-            <strong className="actualName">
-              <a href={link}>{name} </a>
-            </strong>
-          </p>
-          is the developer behind
-          <strong> {videos}</strong> videos, by <strong>{creatorCount}</strong>{" "}
-          creators, with <strong>{viewsMillions} million</strong> combined
-          views.
-        </p>
+        <div className="name">
+          <div className="violet">
+            <img src={todaysViolet.avatar} width="116px" />
+          </div>
+          <div className="innerName">
+            <p>
+              <strong className="actualName">
+                <a href={link}>{name} </a>
+              </strong>
+            </p>
+            <div>
+              is the developer behind
+              <strong> {videos}</strong> videos, by{" "}
+              <strong>{creatorCount}</strong> creators, with{" "}
+              <strong>{viewsMillions} million</strong> combined views.
+            </div>
+          </div>
+        </div>
         {!isForm ? (
           <div />
         ) : (
