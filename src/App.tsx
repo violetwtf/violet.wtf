@@ -234,7 +234,9 @@ function App() {
       <div className="nameArea margin50">
         <div className="name">
           <div className="violet">
-            <img src={todaysViolet.avatar} width="116px" />
+            <a href={link}>
+              <img src={todaysViolet.avatar} width="116px" />
+            </a>
           </div>
           <div className="innerName">
             <p>
