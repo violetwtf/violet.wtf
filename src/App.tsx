@@ -20,6 +20,7 @@ import KiingLogo from "./assets/kiing.jpg";
 import AntLogo from "./assets/ant.jpg";
 import WilburLogo from "./assets/wilbur.jpg";
 import TaplLogo from "./assets/tapl.jpg";
+import BionicLogo from "./assets/bionic.jpg";
 
 const VIOLETS = [
   {
@@ -353,6 +354,11 @@ function App() {
           gradientColors={["#e49a64", "#a5019a", "#00bbff"]}
           logo={KiingLogo}
           creator={creators.kiing}
+        />
+        <Experience
+          gradientColors={["#a6a6a6", "#18a39d", "#948059"]}
+          logo={BionicLogo}
+          creator={creators.bionic}
         />
         <Experience
           gradientColors={["#aba514", "#a56b01", "#393939"]}

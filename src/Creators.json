@@ -110,5 +110,14 @@
     "viewsThousands": [1654],
     "years": ["2020"],
     "yt": "WilburPlays"
+  },
+  "bionic": {
+    "current": true,
+    "name": "Bionic",
+    "subs": "1.7 million",
+    "videoIds": [],
+    "viewsThousands": [],
+    "years": ["2020"],
+    "yt": "BionicDanny"
   }
 }
