@@ -312,7 +312,7 @@ function App() {
           <span> | </span>
           <span
             className="social"
-            onClick={(_) => nl("violet#3993", "https://violet.wtf")}
+            onClick={(_) => nl("violet#1337", "https://violet.wtf")}
           >
             discord
           </span>
