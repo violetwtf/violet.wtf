@@ -20,9 +20,9 @@ export default function ExperienceBox(props: any) {
   return (
     <div>
       <div className="experience" style={background}>
-        <a href={props.link}>
+        { props.logo ? <a href={props.link}>
           <img className="logo" src={props.logo} />
-        </a>
+        </a> : <div />}
         <div className="expText">
           <p>
             <b className="expName">

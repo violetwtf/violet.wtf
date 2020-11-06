@@ -21,6 +21,10 @@ import AntLogo from "./assets/ant.jpg";
 import WilburLogo from "./assets/wilbur.jpg";
 import TaplLogo from "./assets/tapl.jpg";
 import BionicLogo from "./assets/bionic.jpg";
+import OctaneLogo from "./assets/octane.png";
+import OctaneWordmark from "./assets/octane_wordmark.png";
+
+import ExperienceBox from "./components/ExperienceBox";
 
 const VIOLETS = [
   {
@@ -350,6 +354,15 @@ function App() {
         </div>
       </div>
       <div className="margin50">
+        <ExperienceBox
+          gradientColors={["#3d3d3d", "#3d3d3d", "#222222"]}
+          creator={{years: [2020], name: "OctaneMC", current: true}}
+          link="https://octanemc.net"
+          logo={OctaneLogo}
+        >
+          A Minecraft network owned by <b>Graser</b> and <b>Kiingtong</b>. Violet's the development 
+          manager, and is less active in YouTube work to focus on the success of Octane.<br />
+        </ExperienceBox>
         <Experience
           gradientColors={["#e49a64", "#a5019a", "#00bbff"]}
           logo={KiingLogo}
