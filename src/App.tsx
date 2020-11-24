@@ -114,7 +114,7 @@ function App() {
   const [link, setLink] = useState("https://violet.wtf");
   const [fetched, setFetched] = useState(false);
   const [creators, setCreators] = useState(Creators as any);
-  const [isViolet, setViolet] = useState(true);
+  const [isViolet, setViolet] = useState(false);
   const [isForm, setForm] = useState(
     window.location.href.endsWith("violetWasHere")
   );
