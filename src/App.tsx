@@ -22,7 +22,7 @@ import WilburLogo from "./assets/wilbur.jpg";
 import TaplLogo from "./assets/tapl.jpg";
 import BionicLogo from "./assets/bionic.jpg";
 import OctaneLogo from "./assets/octane.png";
-import OctaneWordmark from "./assets/octane_wordmark.png";
+import SmpLogo from "./assets/smp.jpg";
 
 import ExperienceBox from "./components/ExperienceBox";
 
@@ -234,6 +234,22 @@ function App() {
     }
   }
 
+  // video count
+  const smpVideoCount = creators.smp.videoIds.length;
+
+  const smpTotalViewsThousands =
+    smpVideoCount === 0
+      ? 0
+      : creators.smp.viewsThousands.reduce((a: number, b: number) => a + b);
+
+  let smpViews;
+
+  if (smpTotalViewsThousands >= 1000) {
+    smpViews = (smpTotalViewsThousands / 1000).toFixed(1) + " million";
+  } else {
+    smpViews = smpTotalViewsThousands + " thousand";
+  }
+
   return (
     <div>
       <div className="nameArea margin50">
@@ -356,12 +372,33 @@ function App() {
       <div className="margin50">
         <ExperienceBox
           gradientColors={["#3d3d3d", "#3d3d3d", "#222222"]}
-          creator={{years: [2020], name: "OctaneMC", current: true}}
+          creator={{ years: [2020], name: "OctaneMC", current: true }}
           link="https://octanemc.net"
           logo={OctaneLogo}
         >
-          A Minecraft network owned by <b>Graser</b> and <b>Kiingtong</b>. Violet's the development 
-          manager, and is less active in YouTube work to focus on the success of Octane.<br />
+          A Minecraft network owned by <b>Graser</b> and <b>Kiingtong</b>.
+          Violet's the development manager, and is less active in YouTube work
+          to focus on the success of Octane.
+          <br />
+        </ExperienceBox>
+        <ExperienceBox
+          link="https://twitter.com/UHCBoys"
+          gradientColors={["#2f2f2f", "#2f2f2f", "#3b3a3a"]}
+          creator={creators.smp}
+          logo={SmpLogo}
+        >
+          <b>Minecraft SMP</b> featuring {" "}
+          <b><a href="https://youtube.com/Graser">Graser</a></b>,{" "} 
+          <b><a href="https://youtube.com/Kiingtong">Kiingtong</a></b>,{" "}
+          <b><a href="https://youtube.com/BionicDanny">Bionic</a></b>,{" "}
+          <b><a href="https://youtube.com/EmOrSomething">EmOrSomething</a></b>,{" "} 
+          <b><a href="https://youtube.com/Grapeapplesauce">Grapeapplesauce</a></b>,{" "}
+          <b><a href="https://youtube.com/xNestorio">xNestorio</a></b>,{" "} 
+          <b><a href="https://youtube.com/ZMCNikolai">ZMCNikolai</a></b>,{" "}
+          <b><a href="https://youtube.com/TYBZI">TYBZI</a></b>, and {" "}
+          <b><a href="https://youtube.com/Vasehh">Vasehh</a></b>.
+          Code for <b> {smpVideoCount} videos</b> with
+          <b> {smpViews}</b> combined views.
         </ExperienceBox>
         <Experience
           gradientColors={["#e49a64", "#a5019a", "#00bbff"]}
