@@ -382,7 +382,7 @@ function App() {
           <br />
         </ExperienceBox>
         <ExperienceBox
-          link="https://twitter.com/UHCBoys"
+          link="https://uhcboys.com"
           gradientColors={["#2f2f2f", "#2f2f2f", "#3b3a3a"]}
           creator={creators.smp}
           logo={SmpLogo}
