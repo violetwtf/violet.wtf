@@ -388,15 +388,15 @@ function App() {
           logo={SmpLogo}
         >
           <b>Minecraft SMP</b> featuring {" "}
-          <b><a href="https://youtube.com/Graser">Graser</a></b>,{" "} 
-          <b><a href="https://youtube.com/Kiingtong">Kiingtong</a></b>,{" "}
-          <b><a href="https://youtube.com/BionicDanny">Bionic</a></b>,{" "}
-          <b><a href="https://youtube.com/EmOrSomething">EmOrSomething</a></b>,{" "} 
-          <b><a href="https://youtube.com/Grapeapplesauce">Grapeapplesauce</a></b>,{" "}
-          <b><a href="https://youtube.com/xNestorio">xNestorio</a></b>,{" "} 
-          <b><a href="https://youtube.com/ZMCNikolai">ZMCNikolai</a></b>,{" "}
-          <b><a href="https://youtube.com/TYBZI">TYBZI</a></b>, and {" "}
-          <b><a href="https://youtube.com/Vasehh">Vasehh</a></b>.
+          <b><a href="https://uhcboys.com/members/graser">Graser</a></b>,{" "} 
+          <b><a href="https://uhcboys.com/members/kiingtong">Kiingtong</a></b>,{" "}
+          <b><a href="https://uhcboys.com/members/bionic">Bionic</a></b>,{" "}
+          <b><a href="https://uhcboys.com/members/emorsomething">EmOrSomething</a></b>,{" "} 
+          <b><a href="https://uhcboys.com/members/grapeapplesauce">Grapeapplesauce</a></b>,{" "}
+          <b><a href="https://uhcboys.com/members/xnestorio">xNestorio</a></b>,{" "} 
+          <b><a href="https://uhcboys.com/members/zmcnikolai">ZMCNikolai</a></b>,{" "}
+          <b><a href="https://uhcboys.com/members/tybzi">TYBZI</a></b>, and {" "}
+          <b><a href="https://uhcboys.com/members/vasehh">Vasehh</a></b>.
           Code for <b> {smpVideoCount} videos</b> with
           <b> {smpViews}</b> combined views.
         </ExperienceBox>
