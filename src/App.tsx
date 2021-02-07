@@ -371,17 +371,6 @@ function App() {
       </div>
       <div className="margin50">
         <ExperienceBox
-          gradientColors={["#3d3d3d", "#3d3d3d", "#222222"]}
-          creator={{ years: [2020], name: "OctaneMC", current: true }}
-          link="https://octanemc.net"
-          logo={OctaneLogo}
-        >
-          A Minecraft network owned by <b>Graser</b> and <b>Kiingtong</b>.
-          Violet's the development manager, and is less active in YouTube work
-          to focus on the success of Octane.
-          <br />
-        </ExperienceBox>
-        <ExperienceBox
           link="https://uhcboys.com"
           gradientColors={["#2f2f2f", "#2f2f2f", "#3b3a3a"]}
           creator={creators.smp}
@@ -399,6 +388,16 @@ function App() {
           <b><a href="https://uhcboys.com/members/vasehh">Vasehh</a></b>.
           Code for <b> {smpVideoCount} videos</b> with
           <b> {smpViews}</b> combined views.
+        </ExperienceBox>
+        <ExperienceBox
+          gradientColors={["#3d3d3d", "#3d3d3d", "#222222"]}
+          creator={{ years: [2020, 2021], name: "OctaneMC", current: false }}
+          link="https://octanemc.net"
+          logo={OctaneLogo}
+        >
+          A Minecraft network owned by <b>Graser</b> and <b>Kiingtong</b>.
+          Violet was the lead developer, managing a team of 4.
+          <br />
         </ExperienceBox>
         <Experience
           gradientColors={["#e49a64", "#a5019a", "#00bbff"]}
