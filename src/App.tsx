@@ -23,6 +23,7 @@ import TaplLogo from "./assets/tapl.jpg";
 import BionicLogo from "./assets/bionic.jpg";
 import OctaneLogo from "./assets/octane.png";
 import SmpLogo from "./assets/smp.jpg";
+import TechnoveLogo from "./assets/technove.jpg";
 
 import ExperienceBox from "./components/ExperienceBox";
 
@@ -374,6 +375,20 @@ function App() {
         </div>
       </div>
       <div className="margin50">
+        <ExperienceBox
+          link="https://technove.co"
+          creator={{ 
+            years: [2021], 
+            name: <span className="technove">TECHNOVÉ</span>, 
+            current: true,
+          }}
+          gradientColors={["#222", "#222", "#222"]}
+          logo={TechnoveLogo}
+        >
+          <b>Development company </b> where Violet works. Specialises in optimisation, network{" "}
+          splits, server software, and plugins. Violet is now exclusively contracting through{" "}
+          TECHNOVÉ.
+        </ExperienceBox>
         <ExperienceBox
           link="https://uhcboys.com"
           gradientColors={["#2f2f2f", "#2f2f2f", "#3b3a3a"]}
