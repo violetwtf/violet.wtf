@@ -158,6 +158,10 @@ function App() {
 
       seenVideos.push(id);
 
+      if (isNaN(creator.viewsThousands[i])) {
+        continue;
+      }
+
       viewsThousands += creator.viewsThousands[i];
     }
   }
